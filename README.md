@@ -1,7 +1,7 @@
 # DB
 Data Base Cojanu
 
-
+WARNING: Here are inserted screenshots from VirtualBox Win10 Home. Sorry for that, MacOS the best!!!!
 
 *Lab 1*
 
