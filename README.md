@@ -57,14 +57,6 @@ Exercise 4:
 
 *Lab3*
 
-Exercise 1:
-
-a)
-b)
-c)
-d)
-
-
 Exercise 2:
 
 ![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/41603519_470836879988706_8400354447791751168_n.png?_nc_cat=0&oh=0ce461e63154d56b7f3c2b0db4842947&oe=5C222FD2)
