@@ -1,5 +1,22 @@
 
 Lab 3
 
-![alt text]()
+
+![lala](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/41990739_728119644201672_2694107829433794560_n.png?_nc_cat=0&oh=7a725cf88009b95138c25054db59fb68&oe=5C2D3E5B)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/41952321_311862369367358_4064396851502120960_n.png?_nc_cat=0&oh=423f112f1642607fafb0940bc3eb0bf6&oe=5C2891D3)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/42089538_1986743771617063_7782338117373001728_n.png?_nc_cat=0&oh=43ae4437866d955de48000db0954cac7&oe=5C2151CD)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/42044413_2287286298171410_7866683939262300160_n.png?_nc_cat=0&oh=7159b31954580383b3e5c4e129b99773&oe=5C266DE4)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/42182286_1054323001408150_8207431053795655680_n.png?_nc_cat=0&oh=0396d8c31c31cde55b8176172c9c7f41&oe=5C3639FC)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/41990990_241472696715561_6023146691484450816_n.png?_nc_cat=0&oh=4f1436932e24f4fa154bc3983e1a7746&oe=5C1B4114)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/42058954_2254975774515775_6276848734621925376_n.png?_nc_cat=0&oh=b7cf5cb45ccd7afbaae07c5f82d444d5&oe=5C365760)
+
+![alt text](https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.15752-9/41990743_520106945121317_6027781107225722880_n.png?_nc_cat=0&oh=07bd09b170706a215889712654ca7496&oe=5C1F308E)
+
+
 
