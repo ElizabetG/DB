@@ -1,0 +1,41 @@
+
+9
+SELECT DISTINCT studenti.Nume_Student, studenti.Adresa_Postala_Student, discipline.Id_Disciplina
+FROM ((studenti_reusita 
+RIGHT JOIN studenti ON studenti.Id_Student = studenti_reusita.Id_Student)
+RIGHT JOIN discipline ON discipline.Id_Disciplina = studenti_reusita.Id_Disciplina)
+WHERE (studenti_reusita.Nota >= 8 OR studenti_reusita.Data_Evaluare LIKE '%2018%')
+
+
+
+13
+
+SELECT DISTINCT discipline.Disciplina AS Nume_Disciplina
+FROM ((studenti_reusita 
+INNER JOIN studenti ON studenti.Id_Student = studenti_reusita.Id_Student)
+INNER JOIN discipline ON discipline.Id_Disciplina = studenti_reusita.Id_Disciplina)
+
+
+
+28
+
+SELECT DISTINCT studenti.Nume_Student, studenti.Adresa_Postala_Student, discipline.Id_Disciplina
+FROM ((studenti_reusita 
+RIGHT JOIN studenti ON studenti.Id_Student = studenti_reusita.Id_Student)
+RIGHT JOIN discipline ON discipline.Id_Disciplina = studenti_reusita.Id_Disciplina)
+WHERE (studenti_reusita.Nota >= 8 OR studenti_reusita.Data_Evaluare LIKE '%2018%')
+
+
+
+35
+
+SELECT discipline.Disciplina
+FROM (studenti_reusita
+INNER JOIN discipline ON discipline.Id_Disciplina = studenti_reusita.Id_Disciplina)
+GROUP BY discipline.Disciplina HAVING AVG(studenti_reusita.Nota) > 7
+
+
+
+
+
+
