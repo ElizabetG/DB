@@ -1,0 +1,92 @@
+I got tired of this SQL... Enjoying bed soon 
+
+
+Items 1 to 5 was implemented and the result see in screenshot "1-5" from "screens" folder
+
+
+--6.Creati, in baza de date universitatea, trei scheme noi: cadre_didactice, plan_studii si studenti. Transferati tabelul profesori din 
+--schema dbo in schema cadre didactice, tinand cont de dependentelor definite asupra tabelului mentionat. in acelasi mod sa se trateze 
+--tabelele orarul, discipline care apartin schemei plan_studii si tabelele studenti, studenti_reusita, care apartin schemei studenti. 
+--Se scrie instructiunile SQL respective. 
+ 
+ 
+       CREATE SCHEMA cadre_didactice;
+       go
+       CREATE SCHEMA plan_studii;
+       go
+       CREATE SCHEMA studenti; 
+       go
+       ALTER SCHEMA cadre_didactice TRANSFER dbo.profesori 
+       ALTER SCHEMA plan_studii TRANSFER dbo.orarul
+       ALTER SCHEMA plan_studii TRANSFER dbo.discipline
+       ALTER SCHEMA studenti TRANSFER dbo.studenti_reusita 
+
+ 
+ 
+ 
+ --7. Modificati 2-3 interogari asupra bazei de date universitatea prezentate in capitolul 4 astfel ca numele
+ -- tabelelor accesate sa fie descrise in mod explicit, tinand cont de faptul ca tabelele au fost mutate in scheme noi.
+ 
+ --   5.
+      
+      SELECT studenti.studenti.Nume_Student, studenti.studenti.Prenume_Student
+      FROM studenti.studenti
+      WHERE studenti.studenti.Nume_Student like '%u'
+
+
+ --   18.
+      SELECT distinct cadre_didactice.profesori.Nume_Profesor, cadre_didactice.profesori.Prenume_Profesor
+      FROM studenti.studenti_reusita
+      INNER JOIN cadre_didactice.profesori
+      ON studenti.studenti_reusita.Id_Profesor=cadre_didactice.profesori.Id_Profesor
+      WHERE Id_Disciplina not in( 
+      SELECT discipline.Id_Disciplina
+      FROM plan_studii.discipline
+      WHERE discipline.Nr_ore_plan_disciplina>60)
+
+      
+      
+ --   28.
+      SELECT DISTINCT studenti.studenti.Nume_Student, studenti.studenti.Prenume_Student
+      FROM ((studenti.studenti_reusita
+      INNER JOIN studenti.studenti ON studenti.studenti.Id_Student = studenti.studenti_reusita.Id_Student)
+      INNER JOIN cadre_didactice.profesori ON cadre_didactice.profesori.Id_Profesor = cadre_didactice.profesori.Id_Profesor)
+      WHERE (cadre_didactice.profesori.Prenume_Profesor LIKE '%Ion%' OR cadre_didactice.profesori.Prenume_Profesor LIKE '%Gheorghe%')
+
+
+
+--8. Creati sinonimele respective pentru a simplifica interogarile construite in exercitiul 
+      CREATE SYNONYM studenti_1 FOR  studenti.studenti;
+      CREATE SYNONYM studenti_reu FOR  studenti.studenti_reusita;
+      CREATE SYNONYM discipline_1 FOR plan_studii.discipline
+      CREATE SYNONYM profesori_1 FOR cadre_didactice.profesori
+
+--    5.
+      SELECT Nume_student,Prenume_student
+      FROM studenti_1
+      WHERE Nume_student like '%u'
+
+      
+ --   18.
+      SELECT distinct Nume_profesor, Prenume_profesor
+      FROM studenti_reu
+      INNER JOIN profesori_1
+      ON studenti_reu.Id_Profesor=profesori_1.Id_Profesor
+      WHERE Id_Disciplina not in( 
+      SELECT Id_Disciplina
+      FROM discipline_1
+      WHERE Nr_ore_plan_disciplina>60)
+
+--    28.
+      SELECT DISTINCT studenti_1.Nume_Student, studenti_1.Prenume_Student
+      FROM ((studenti_reu
+      INNER JOIN studenti_1 ON studenti_1.Id_Student = studenti_reu.Id_Student)
+      INNER JOIN profesori_1 ON profesori_1.Id_Profesor = profesori_1.Id_Profesor)
+      WHERE (profesori_1.Prenume_Profesor LIKE '%Ion%' OR profesori_1.Prenume_Profesor LIKE '%Gheorghe%')
+
+
+
+
+
+
+
