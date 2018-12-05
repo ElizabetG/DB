@@ -1,6 +1,7 @@
 --1. Sa se creeze doua viziuni in baza interogarilor formulate in doua exercitii indicate din capitolul 4.
 -- Prima viziune sa fie construita in Editorul de interogari, iar a doua, utilizand View Designer.
 
+```sql
       CREATE VIEW NUME_PRENUME_ST 
       AS 
       SELECT studenti.id_student, studenti.Nume_Student, studenti.Prenume_Student
@@ -15,7 +16,7 @@
       INNER JOIN studenti.studenti_reusita
       ON STUDENTI.Id_Student= studenti_reusita.Id_Student
       WHERE Nota>6
-
+```
 --2. Sa se scrie cate un exemplu de instructiuni INSERT, UPDATE, DELETE asupra viziunilor create. 
 --Sa se adauge comentariile respective referitoare la rezultatele executarii acestor instructiuni.
       
